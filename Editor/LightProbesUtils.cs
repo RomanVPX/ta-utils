@@ -86,11 +86,11 @@ namespace TechArtUtils
 			}
 
 			
-			if (_showProbesMergingInsideBb)
+			if (MergeBoundingBox!=null && _showProbesMergingInsideBb)
 			{
 				if (_probesToDistanceMerge != null)
 				{
-					if(_forceSceneGuiRefresh && MergeBoundingBox.transform.hasChanged)
+					if( _forceSceneGuiRefresh && MergeBoundingBox.transform.hasChanged)
 						_probesToDistanceMerge = GetProbesInsideCollider(_groupToOperateOn, MergeBoundingBox).ToList();
 					
 					Handles.color = PaleGreenColor;
