@@ -264,7 +264,7 @@ namespace TechArtUtils
 				
 				foreach (Vector3 probeToCheckIfClusters in probesToDistanceMerge)
 				{
-					if(Vector3.Distance(probeToClusterAround,probeToCheckIfClusters)<=_mergeByDistanceDistance && !probeToCheckIfClusters.AlmostEquals(probeToClusterAround, 0.1f))
+					if(Vector3.Distance(probeToClusterAround,probeToCheckIfClusters)<=_mergeByDistanceDistance && probeToCheckIfClusters != probeToClusterAround)
 						localCluster.Add(probeToCheckIfClusters);
 				}
 				probesClusters.Add(localCluster);
